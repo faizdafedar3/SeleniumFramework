@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-06-01T14:32:58 IST" name="Default suite" finished-at="2026-06-01T14:39:54 IST" duration-ms="416333">
+    <groups>
+    </groups>
+    <test started-at="2026-06-01T14:32:58 IST" name="Default test" finished-at="2026-06-01T14:39:54 IST" duration-ms="416333">
+      <class name="com.faiz.automation.tests.RegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:32:58 IST" name="setUp" finished-at="2026-06-01T14:33:37 IST" duration-ms="38858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:37 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:33:49 IST" duration-ms="12024" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz12345@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[PASS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:49 IST" name="tearDown" finished-at="2026-06-01T14:33:50 IST" duration-ms="738" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:50 IST" name="setUp" finished-at="2026-06-01T14:33:55 IST" duration-ms="5607" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:55 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:02 IST" duration-ms="7116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[F]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz1@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[PASS]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:02 IST" name="tearDown" finished-at="2026-06-01T14:34:03 IST" duration-ms="536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:03 IST" name="setUp" finished-at="2026-06-01T14:34:13 IST" duration-ms="9762" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:13 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:25 IST" duration-ms="12570" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:25 IST" name="tearDown" finished-at="2026-06-01T14:34:26 IST" duration-ms="605" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:26 IST" name="setUp" finished-at="2026-06-01T14:34:39 IST" duration-ms="13459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:39 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:52 IST" duration-ms="12388" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:52 IST" name="tearDown" finished-at="2026-06-01T14:34:52 IST" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:52 IST" name="setUp" finished-at="2026-06-01T14:35:00 IST" duration-ms="7436" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:00 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:35:13 IST" duration-ms="12755" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:13 IST" name="tearDown" finished-at="2026-06-01T14:35:13 IST" duration-ms="547" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:13 IST" name="setUp" finished-at="2026-06-01T14:35:18 IST" duration-ms="5257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:18 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:36:16 IST" duration-ms="57343" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[invalidemail]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:16 IST" name="tearDown" finished-at="2026-06-01T14:36:16 IST" duration-ms="518" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:16 IST" name="setUp" finished-at="2026-06-01T14:36:43 IST" duration-ms="27036" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:43 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:38:22 IST" duration-ms="98497" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz@gmail]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:22 IST" name="tearDown" finished-at="2026-06-01T14:38:22 IST" duration-ms="670" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:22 IST" name="setUp" finished-at="2026-06-01T14:38:28 IST" duration-ms="5397" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:28 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:38:41 IST" duration-ms="12779" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:41 IST" name="tearDown" finished-at="2026-06-01T14:38:41 IST" duration-ms="673" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:41 IST" name="setUp" finished-at="2026-06-01T14:39:06 IST" duration-ms="24451" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:06 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:39:19 IST" duration-ms="13269" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[12345]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:19 IST" name="tearDown" finished-at="2026-06-01T14:39:20 IST" duration-ms="1195" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:20 IST" name="setUp" finished-at="2026-06-01T14:39:34 IST" duration-ms="13775" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:34 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:39:54 IST" duration-ms="19440" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Faiz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dafedar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[faiz@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@124]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[FAIL]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistration -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:54 IST" name="tearDown" finished-at="2026-06-01T14:39:54 IST" duration-ms="477" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.faiz.automation.tests.RegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

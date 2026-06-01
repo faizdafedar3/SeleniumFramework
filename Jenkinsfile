@@ -2,22 +2,45 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'
-        jdk 'JDK17'
+        maven 'maven-3.9.1'
+    }
+
+    environment {
+        JAVA_HOME = 'C:\\Program Files\\Eclipse Adoptium\\jdk-21.0.9.10-hotspot'
+        PATH = "${env.JAVA_HOME}\\bin;${env.PATH}"
     }
 
     stages {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/faizdafedar3/SeleniumFramework.git'
+                checkout scm
             }
         }
 
-        stage('Build') {
+        stage('Verify Java & Maven') {
+            steps {
+                bat '''
+                echo JAVA_HOME=%JAVA_HOME%
+                java -version
+                mvn -version
+                '''
+            }
+        }
+
+        stage('Build & Test') {
             steps {
                 bat 'mvn clean test'
             }
+        }
+    }
+
+    post {
+        success {
+            echo 'BUILD SUCCESS'
+        }
+        failure {
+            echo 'BUILD FAILED'
         }
     }
 }

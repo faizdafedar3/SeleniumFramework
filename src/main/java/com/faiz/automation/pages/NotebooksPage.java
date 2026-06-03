@@ -2,8 +2,10 @@ package com.faiz.automation.pages;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,34 +14,35 @@ public class NotebooksPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    private final By notebookProduct =
-            By.linkText("14.1-inch Laptop");
+    @FindBy(linkText = "14.1-inch Laptop")
+    private WebElement notebookProduct;
 
-    private final By addToCartButton =
-            By.xpath("//a[text()='14.1-inch Laptop']/ancestor::div[contains(@class,'product-item')]//input[@value='Add to cart']");
+    @FindBy(xpath = "//a[text()='14.1-inch Laptop']/ancestor::div[contains(@class,'product-item')]//input[@value='Add to cart']")
+    private WebElement addToCartButton;
 
-    private final By successNotification =
-            By.cssSelector(".bar-notification.success");
+    @FindBy(css = ".bar-notification.success")
+    private WebElement successNotification;
 
-    private final By notificationClose =
-            By.cssSelector(".bar-notification.success .close");
+    @FindBy(css = ".bar-notification.success .close")
+    private WebElement notificationClose;
 
-    private final By notificationCartLink =
-            By.cssSelector(".bar-notification.success a[href='/cart']");
+    @FindBy(css = ".bar-notification.success a[href='/cart']")
+    private WebElement notificationCartLink;
 
-    private final By shoppingCartLink =
-            By.cssSelector("a.ico-cart");
+    @FindBy(css = "a.ico-cart")
+    private WebElement shoppingCartLink;
 
     public NotebooksPage(WebDriver driver) {
 
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        PageFactory.initElements(driver, this);
     }
 
     public NotebooksPage open() {
 
         driver.get("https://demowebshop.tricentis.com/notebooks");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(notebookProduct));
+        wait.until(ExpectedConditions.visibilityOf(notebookProduct));
         return this;
     }
 
@@ -48,13 +51,12 @@ public class NotebooksPage {
         wait.until(ExpectedConditions.elementToBeClickable(addToCartButton))
                 .click();
 
-        wait.until(ExpectedConditions.visibilityOfElementLocated(successNotification));
+        wait.until(ExpectedConditions.visibilityOf(successNotification));
     }
 
     public ShoppingCartPage openShoppingCart() {
 
-        if (!driver.findElements(notificationCartLink)
-                .isEmpty()) {
+        if (isDisplayed(notificationCartLink)) {
 
             wait.until(ExpectedConditions.elementToBeClickable(notificationCartLink))
                     .click();
@@ -72,13 +74,21 @@ public class NotebooksPage {
 
     private void closeSuccessNotificationIfDisplayed() {
 
-        if (!driver.findElements(notificationClose)
-                .isEmpty()) {
+        if (isDisplayed(notificationClose)) {
 
             wait.until(ExpectedConditions.elementToBeClickable(notificationClose))
                     .click();
 
-            wait.until(ExpectedConditions.invisibilityOfElementLocated(successNotification));
+            wait.until(ExpectedConditions.invisibilityOf(successNotification));
+        }
+    }
+
+    private boolean isDisplayed(WebElement element) {
+
+        try {
+            return element.isDisplayed();
+        } catch (Exception e) {
+            return false;
         }
     }
 }

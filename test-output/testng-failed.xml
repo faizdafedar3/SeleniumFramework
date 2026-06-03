@@ -6,8 +6,8 @@
       <class name="com.faiz.automation.tests.NotebookOrderTest">
         <methods>
           <include name="tearDown"/>
-          <include name="setUp"/>
           <include name="selectNotebookAndPlaceOrder"/>
+          <include name="setUp"/>
         </methods>
       </class> <!-- com.faiz.automation.tests.NotebookOrderTest -->
     </classes>

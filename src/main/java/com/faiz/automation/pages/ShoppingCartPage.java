@@ -2,8 +2,10 @@ package com.faiz.automation.pages;
 
 import java.time.Duration;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,24 +14,25 @@ public class ShoppingCartPage {
     private final WebDriver driver;
     private final WebDriverWait wait;
 
-    private final By productName =
-            By.linkText("14.1-inch Laptop");
+    @FindBy(linkText = "14.1-inch Laptop")
+    private WebElement productName;
 
-    private final By termsOfService =
-            By.id("termsofservice");
+    @FindBy(id = "termsofservice")
+    private WebElement termsOfService;
 
-    private final By checkoutButton =
-            By.id("checkout");
+    @FindBy(id = "checkout")
+    private WebElement checkoutButton;
 
     public ShoppingCartPage(WebDriver driver) {
 
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        PageFactory.initElements(driver, this);
     }
 
     public boolean isNotebookDisplayed() {
 
-        return wait.until(ExpectedConditions.visibilityOfElementLocated(productName))
+        return wait.until(ExpectedConditions.visibilityOf(productName))
                 .isDisplayed();
     }
 

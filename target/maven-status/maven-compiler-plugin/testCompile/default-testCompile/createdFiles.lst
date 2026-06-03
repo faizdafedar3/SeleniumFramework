@@ -1,1 +1,4 @@
+com\faiz\automation\tests\LoginTest.class
+com\faiz\automation\tests\RegistrationAndLoginTest.class
 com\faiz\automation\tests\RegistrationTest.class
+com\faiz\automation\tests\NotebookOrderTest.class

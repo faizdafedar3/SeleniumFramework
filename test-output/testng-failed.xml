@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.faiz.automation.tests.RegistrationTest">
+      <class name="com.faiz.automation.tests.NotebookOrderTest">
         <methods>
-          <include name="verifyRegistration" invocation-numbers="7"/>
           <include name="tearDown"/>
           <include name="setUp"/>
+          <include name="selectNotebookAndPlaceOrder"/>
         </methods>
-      </class> <!-- com.faiz.automation.tests.RegistrationTest -->
+      </class> <!-- com.faiz.automation.tests.NotebookOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

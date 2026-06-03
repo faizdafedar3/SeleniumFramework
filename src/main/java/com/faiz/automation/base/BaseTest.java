@@ -7,12 +7,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.faiz.automation.utils.ConfigReader;
+
 public class BaseTest {
 
     protected WebDriver driver;
 
     public WebDriver getDriver() {
-
         return driver;
     }
 
@@ -25,18 +26,16 @@ public class BaseTest {
 
         driver.manage()
               .timeouts()
-              .implicitlyWait(
-                      Duration.ofSeconds(10));
+              .implicitlyWait(Duration.ofSeconds(10));
 
         driver.get(
-            "https://demowebshop.tricentis.com/");
+                ConfigReader.getProperty("url"));
     }
 
     @AfterMethod
     public void tearDown() {
 
         if (driver != null) {
-
             driver.quit();
         }
     }

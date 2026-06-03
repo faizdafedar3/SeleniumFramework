@@ -1,17 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-06-01T14:32:58 IST" name="Default suite" finished-at="2026-06-01T14:39:54 IST" duration-ms="416333">
+  <suite started-at="2026-06-03T23:46:17 IST" name="Default suite" finished-at="2026-06-03T23:49:13 IST" duration-ms="176367">
     <groups>
     </groups>
-    <test started-at="2026-06-01T14:32:58 IST" name="Default test" finished-at="2026-06-01T14:39:54 IST" duration-ms="416333">
-      <class name="com.faiz.automation.tests.RegistrationTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:32:58 IST" name="setUp" finished-at="2026-06-01T14:33:37 IST" duration-ms="38858" status="PASS">
+    <test started-at="2026-06-03T23:46:17 IST" name="Default test" finished-at="2026-06-03T23:49:13 IST" duration-ms="176367">
+      <class name="com.faiz.automation.tests.LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.LoginTest@7b02881e]" started-at="2026-06-03T23:46:27 IST" name="setUp" finished-at="2026-06-03T23:46:33 IST" duration-ms="6205" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:37 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:33:49 IST" duration-ms="12024" status="PASS">
+        <test-method signature="verifyLogin()[pri:0, instance:com.faiz.automation.tests.LoginTest@7b02881e]" started-at="2026-06-03T23:46:33 IST" name="verifyLogin" finished-at="2026-06-03T23:46:35 IST" duration-ms="1821" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.LoginTest@7b02881e]" started-at="2026-06-03T23:46:35 IST" name="tearDown" finished-at="2026-06-03T23:46:35 IST" duration-ms="371" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.faiz.automation.tests.LoginTest -->
+      <class name="com.faiz.automation.tests.RegistrationAndLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationAndLoginTest@6913c1fb]" started-at="2026-06-03T23:46:17 IST" name="setUp" finished-at="2026-06-03T23:46:21 IST" duration-ms="4447" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistrationAndLogin()[pri:0, instance:com.faiz.automation.tests.RegistrationAndLoginTest@6913c1fb]" started-at="2026-06-03T23:46:21 IST" name="verifyRegistrationAndLogin" finished-at="2026-06-03T23:46:26 IST" duration-ms="5105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegistrationAndLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationAndLoginTest@6913c1fb]" started-at="2026-06-03T23:46:26 IST" name="tearDown" finished-at="2026-06-03T23:46:27 IST" duration-ms="374" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.faiz.automation.tests.RegistrationAndLoginTest -->
+      <class name="com.faiz.automation.tests.RegistrationTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:35 IST" name="setUp" finished-at="2026-06-03T23:46:40 IST" duration-ms="4533" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:40 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:46:43 IST" duration-ms="3210" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -47,15 +75,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:49 IST" name="tearDown" finished-at="2026-06-01T14:33:50 IST" duration-ms="738" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:43 IST" name="tearDown" finished-at="2026-06-03T23:46:43 IST" duration-ms="333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:50 IST" name="setUp" finished-at="2026-06-01T14:33:55 IST" duration-ms="5607" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:43 IST" name="setUp" finished-at="2026-06-03T23:46:47 IST" duration-ms="4209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:33:55 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:02 IST" duration-ms="7116" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:47 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:46:51 IST" duration-ms="3578" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -91,15 +119,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:02 IST" name="tearDown" finished-at="2026-06-01T14:34:03 IST" duration-ms="536" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:51 IST" name="tearDown" finished-at="2026-06-03T23:46:51 IST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:03 IST" name="setUp" finished-at="2026-06-01T14:34:13 IST" duration-ms="9762" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:51 IST" name="setUp" finished-at="2026-06-03T23:46:55 IST" duration-ms="4009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:13 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:25 IST" duration-ms="12570" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:46:55 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:47:07 IST" duration-ms="11587" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,15 +163,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:25 IST" name="tearDown" finished-at="2026-06-01T14:34:26 IST" duration-ms="605" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:07 IST" name="tearDown" finished-at="2026-06-03T23:47:07 IST" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:26 IST" name="setUp" finished-at="2026-06-01T14:34:39 IST" duration-ms="13459" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:07 IST" name="setUp" finished-at="2026-06-03T23:47:11 IST" duration-ms="3770" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:39 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:34:52 IST" duration-ms="12388" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:11 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:47:22 IST" duration-ms="11273" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -179,15 +207,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:52 IST" name="tearDown" finished-at="2026-06-01T14:34:52 IST" duration-ms="621" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:22 IST" name="tearDown" finished-at="2026-06-03T23:47:23 IST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:34:52 IST" name="setUp" finished-at="2026-06-01T14:35:00 IST" duration-ms="7436" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:23 IST" name="setUp" finished-at="2026-06-03T23:47:28 IST" duration-ms="5849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:00 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:35:13 IST" duration-ms="12755" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:28 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:47:40 IST" duration-ms="11161" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,15 +251,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:13 IST" name="tearDown" finished-at="2026-06-01T14:35:13 IST" duration-ms="547" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:40 IST" name="tearDown" finished-at="2026-06-03T23:47:40 IST" duration-ms="344" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:13 IST" name="setUp" finished-at="2026-06-01T14:35:18 IST" duration-ms="5257" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:40 IST" name="setUp" finished-at="2026-06-03T23:47:44 IST" duration-ms="3709" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:35:18 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:36:16 IST" duration-ms="57343" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:44 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:47:55 IST" duration-ms="11295" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -267,15 +295,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:16 IST" name="tearDown" finished-at="2026-06-01T14:36:16 IST" duration-ms="518" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:55 IST" name="tearDown" finished-at="2026-06-03T23:47:55 IST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:16 IST" name="setUp" finished-at="2026-06-01T14:36:43 IST" duration-ms="27036" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:55 IST" name="setUp" finished-at="2026-06-03T23:47:59 IST" duration-ms="4072" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:36:43 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:38:22 IST" duration-ms="98497" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:47:59 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:48:11 IST" duration-ms="11296" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -311,15 +339,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:22 IST" name="tearDown" finished-at="2026-06-01T14:38:22 IST" duration-ms="670" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:11 IST" name="tearDown" finished-at="2026-06-03T23:48:11 IST" duration-ms="333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:22 IST" name="setUp" finished-at="2026-06-01T14:38:28 IST" duration-ms="5397" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:11 IST" name="setUp" finished-at="2026-06-03T23:48:16 IST" duration-ms="5149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:28 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:38:41 IST" duration-ms="12779" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:16 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:48:27 IST" duration-ms="11249" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -355,15 +383,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:41 IST" name="tearDown" finished-at="2026-06-01T14:38:41 IST" duration-ms="673" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:27 IST" name="tearDown" finished-at="2026-06-03T23:48:28 IST" duration-ms="320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:38:41 IST" name="setUp" finished-at="2026-06-01T14:39:06 IST" duration-ms="24451" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:28 IST" name="setUp" finished-at="2026-06-03T23:48:32 IST" duration-ms="3776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:06 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:39:19 IST" duration-ms="13269" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:32 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:48:43 IST" duration-ms="11294" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -399,15 +427,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:19 IST" name="tearDown" finished-at="2026-06-01T14:39:20 IST" duration-ms="1195" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:43 IST" name="tearDown" finished-at="2026-06-03T23:48:43 IST" duration-ms="315" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:20 IST" name="setUp" finished-at="2026-06-01T14:39:34 IST" duration-ms="13775" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:43 IST" name="setUp" finished-at="2026-06-03T23:48:47 IST" duration-ms="3971" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:34 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-01T14:39:54 IST" duration-ms="19440" status="PASS">
+        <test-method signature="verifyRegistration(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:47 IST" name="verifyRegistration" data-provider="registrationData" finished-at="2026-06-03T23:48:59 IST" duration-ms="11386" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -443,11 +471,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyRegistration -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@10aa41f2]" started-at="2026-06-01T14:39:54 IST" name="tearDown" finished-at="2026-06-01T14:39:54 IST" duration-ms="477" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.RegistrationTest@3c0be339]" started-at="2026-06-03T23:48:59 IST" name="tearDown" finished-at="2026-06-03T23:48:59 IST" duration-ms="342" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.faiz.automation.tests.RegistrationTest -->
+      <class name="com.faiz.automation.tests.NotebookOrderTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.faiz.automation.tests.NotebookOrderTest@15ca7889]" started-at="2026-06-03T23:48:59 IST" name="setUp" finished-at="2026-06-03T23:49:03 IST" duration-ms="4247" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="selectNotebookAndPlaceOrder()[pri:0, instance:com.faiz.automation.tests.NotebookOrderTest@15ca7889]" started-at="2026-06-03T23:49:03 IST" name="selectNotebookAndPlaceOrder" finished-at="2026-06-03T23:49:13 IST" duration-ms="9556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectNotebookAndPlaceOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.faiz.automation.tests.NotebookOrderTest@15ca7889]" started-at="2026-06-03T23:49:13 IST" name="tearDown" finished-at="2026-06-03T23:49:13 IST" duration-ms="361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.faiz.automation.tests.NotebookOrderTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

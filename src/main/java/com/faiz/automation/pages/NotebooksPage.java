@@ -31,7 +31,10 @@ public class NotebooksPage {
 
     @FindBy(css = "a.ico-cart")
     private WebElement shoppingCartLink;
-
+    
+    
+    
+    
     public NotebooksPage(WebDriver driver) {
 
         this.driver = driver;

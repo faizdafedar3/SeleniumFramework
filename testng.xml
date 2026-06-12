@@ -16,6 +16,16 @@
 
             <class name="com.faiz.automation.tests.NotebookOrderTest"/>
 
+            <class name="com.faiz.automation.tests.TopMenuTabsTest"/>
+
+            <class name="com.faiz.automation.tests.SearchTest"/>
+
+            <class name="com.faiz.automation.tests.NewsletterTest"/>
+
+            <class name="com.faiz.automation.tests.ProductCartTest"/>
+
+            <class name="com.faiz.automation.tests.WishlistAndCompareTest"/>
+
         </classes>
 
     </test>

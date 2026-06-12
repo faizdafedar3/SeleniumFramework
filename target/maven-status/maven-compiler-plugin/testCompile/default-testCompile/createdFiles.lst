@@ -1,4 +1,9 @@
 com\faiz\automation\tests\LoginTest.class
-com\faiz\automation\tests\RegistrationAndLoginTest.class
+com\faiz\automation\tests\SearchTest.class
+com\faiz\automation\tests\NewsletterTest.class
+com\faiz\automation\tests\ProductCartTest.class
 com\faiz\automation\tests\RegistrationTest.class
 com\faiz\automation\tests\NotebookOrderTest.class
+com\faiz\automation\tests\WishlistAndCompareTest.class
+com\faiz\automation\tests\RegistrationAndLoginTest.class
+com\faiz\automation\tests\TopMenuTabsTest.class

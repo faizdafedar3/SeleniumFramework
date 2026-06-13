@@ -4,10 +4,10 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.faiz.automation.base.BaseTest;
 import com.faiz.automation.listeners.TestListener;
 import com.faiz.automation.pages.SearchResultsPage;
 import com.faiz.automation.pages.StoreHeaderPage;
+import com.faiz.automation.tests.base.BaseTest;
 
 @Listeners(TestListener.class)
 public class SearchTest extends BaseTest {

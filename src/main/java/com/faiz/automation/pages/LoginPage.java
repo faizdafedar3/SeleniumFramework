@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
+import com.faiz.automation.base.BasePage;
 
-    WebDriver driver;
+public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver) {
 
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -32,26 +32,21 @@ public class LoginPage {
 
     public void clickLoginLink() {
 
-        loginLink.click();
+        click(loginLink);
     }
 
-    public void login(String emailId,
-                      String pwd) {
+    public void login(String emailId, String pwd) {
 
-        email.clear();
-        email.sendKeys(emailId);
-
-        password.clear();
-        password.sendKeys(pwd);
-
-        loginButton.click();
+        type(email, emailId);
+        type(password, pwd);
+        click(loginButton);
     }
 
     public boolean isLoginSuccessful() {
 
         try {
 
-            return logoutLink.isDisplayed();
+            return isDisplayed(logoutLink);
 
         } catch (Exception e) {
 
@@ -63,9 +58,9 @@ public class LoginPage {
 
         try {
 
-            if (logoutLink.isDisplayed()) {
+            if (isDisplayed(logoutLink)) {
 
-                logoutLink.click();
+                click(logoutLink);
             }
 
         } catch (Exception e) {

@@ -5,9 +5,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.faiz.automation.base.BaseTest;
 import com.faiz.automation.listeners.TestListener;
 import com.faiz.automation.pages.RegistrationPage;
+import com.faiz.automation.tests.base.BaseTest;
 
 @Listeners(TestListener.class)
 public class RegistrationTest extends BaseTest {

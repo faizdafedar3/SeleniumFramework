@@ -37,5 +37,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/faizd/Downloads/eclipse-java-2025-09-R-win32-x86_64/eclipse/plugins/org.testng_7.11.0.r202503091654.jar" sourcepath="C:/Users/faizd/Downloads/eclipse-java-2025-09-R-win32-x86_64/eclipse/plugins/org.testng.source_7.11.0.r202503091654.jar"/>
+	<classpathentry kind="src" path="/RestAssuredFramework"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

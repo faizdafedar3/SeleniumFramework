@@ -73,6 +73,11 @@
             <version>2.0.17</version>
         </dependency>
 
+        <dependency>
+        	<groupId>com.selenium.faiz</groupId>
+        	<artifactId>SeleniumProject</artifactId>
+        	<version>0.0.1-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>

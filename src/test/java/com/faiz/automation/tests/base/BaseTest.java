@@ -1,4 +1,4 @@
-package com.faiz.automation.base;
+package com.faiz.automation.tests.base;
 
 import java.time.Duration;
 
@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import com.faiz.automation.base.DriverFactory;
 import com.faiz.automation.utils.ConfigReader;
 
 public class BaseTest {

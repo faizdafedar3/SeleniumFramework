@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.faiz.automation.base.BaseTest;
 import com.faiz.automation.listeners.TestListener;
 import com.faiz.automation.pages.LoginPage;
+import com.faiz.automation.tests.base.BaseTest;
 import com.faiz.automation.utils.ConfigReader;
 
 @Listeners(TestListener.class)

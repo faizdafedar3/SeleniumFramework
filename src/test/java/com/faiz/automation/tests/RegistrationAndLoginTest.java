@@ -3,9 +3,9 @@ package com.faiz.automation.tests;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.faiz.automation.base.BaseTest;
 import com.faiz.automation.pages.LoginPage;
 import com.faiz.automation.pages.RegistrationPage;
+import com.faiz.automation.tests.base.BaseTest;
 
 public class RegistrationAndLoginTest extends BaseTest {
 

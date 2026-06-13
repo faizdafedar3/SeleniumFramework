@@ -6,7 +6,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.faiz.automation.base.BaseTest;
+import com.faiz.automation.base.DriverFactory;
 import com.faiz.automation.utils.ExtentManager;
 import com.faiz.automation.utils.ScreenshotUtil;
 
@@ -25,7 +25,7 @@ public class TestListener implements ITestListener {
         ExtentTest extentTest =
                 extent.createTest(
                         result.getMethod()
-                        .getMethodName());
+                              .getMethodName());
 
         test.set(extentTest);
     }
@@ -45,18 +45,15 @@ public class TestListener implements ITestListener {
 
         try {
 
-            BaseTest base =
-                    (BaseTest) result.getInstance();
-
             String screenshotPath =
                     ScreenshotUtil.captureScreenshot(
-                            base.getDriver(),
+                            DriverFactory.getDriver(),
                             result.getMethod()
-                            .getMethodName());
+                                  .getMethodName());
 
             test.get()
-            .addScreenCaptureFromPath(
-                    screenshotPath);
+                .addScreenCaptureFromPath(
+                        screenshotPath);
 
         } catch (Exception e) {
 

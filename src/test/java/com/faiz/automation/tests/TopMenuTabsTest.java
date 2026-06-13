@@ -15,7 +15,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyBooksMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openBooks();
 
@@ -28,7 +28,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyComputersMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openComputers();
 
@@ -41,7 +41,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyElectronicsMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openElectronics();
 
@@ -54,7 +54,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyApparelAndShoesMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openApparelAndShoes();
 
@@ -67,7 +67,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyDigitalDownloadsMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openDigitalDownloads();
 
@@ -80,7 +80,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyJewelryMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openJewelry();
 
@@ -93,7 +93,7 @@ public class TopMenuTabsTest extends BaseTest {
     public void verifyGiftCardsMenuTab() {
 
         TopMenuPage topMenuPage =
-                new TopMenuPage(driver);
+                new TopMenuPage(getDriver());
 
         topMenuPage.openGiftCards();
 

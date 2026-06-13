@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="2" parallel="classes" name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="AutomationTests(failed)">
     <classes>
       <class name="com.faiz.automation.tests.LoginTest">
         <methods>
@@ -10,6 +10,13 @@
           <include name="setUp"/>
         </methods>
       </class> <!-- com.faiz.automation.tests.LoginTest -->
+      <class name="com.faiz.automation.tests.RegistrationAndLoginTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="verifyRegistrationAndLogin"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.faiz.automation.tests.RegistrationAndLoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- AutomationTests(failed) -->
+</suite> <!-- Failed suite [AutomationSuite] -->

@@ -11,32 +11,35 @@ import com.faiz.automation.utils.ConfigReader;
 
 public class BaseTest {
 
-    protected WebDriver driver;
-
-    public WebDriver getDriver() {
-        return driver;
-    }
-
     @BeforeMethod
     public void setUp() {
 
-        driver = new ChromeDriver();
+        DriverFactory.setDriver(
+                new ChromeDriver());
 
-        driver.manage().window().maximize();
+        DriverFactory.getDriver()
+                     .manage()
+                     .window()
+                     .maximize();
 
-        driver.manage()
-              .timeouts()
-              .implicitlyWait(Duration.ofSeconds(10));
+        DriverFactory.getDriver()
+                     .manage()
+                     .timeouts()
+                     .implicitlyWait(Duration.ofSeconds(10));
 
-        driver.get(
-                ConfigReader.getProperty("url"));
+        DriverFactory.getDriver()
+                     .get(
+                             ConfigReader.getProperty("url"));
     }
 
     @AfterMethod
     public void tearDown() {
 
-        if (driver != null) {
-            driver.quit();
-        }
+        DriverFactory.quitDriver();
+    }
+
+    public WebDriver getDriver() {
+
+        return DriverFactory.getDriver();
     }
 }

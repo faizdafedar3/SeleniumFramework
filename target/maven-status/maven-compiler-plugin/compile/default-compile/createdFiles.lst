@@ -1,4 +1,5 @@
 com\faiz\automation\pages\SearchResultsPage.class
+com\faiz\automation\base\DriverFactory.class
 com\faiz\automation\pages\LoginPage.class
 com\faiz\automation\pages\WishlistPage.class
 com\faiz\automation\pages\StoreHeaderPage.class
@@ -17,3 +18,4 @@ com\faiz\automation\utils\ConfigReader.class
 com\faiz\automation\utils\ExtentManager.class
 com\faiz\automation\pages\CompareProductsPage.class
 com\faiz\automation\pages\NotebooksPage.class
+com\faiz\automation\base\BasePage.class

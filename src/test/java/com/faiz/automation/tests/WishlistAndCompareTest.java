@@ -16,7 +16,7 @@ public class WishlistAndCompareTest extends BaseTest {
     public void verifyProductCanBeAddedToWishlist() {
 
         ProductDetailsPage productDetailsPage =
-                new ProductDetailsPage(driver)
+                new ProductDetailsPage(getDriver())
                         .openSneaker();
 
         String productName =

@@ -19,7 +19,7 @@ public class NotebookOrderTest extends BaseTest {
     public void selectNotebookAndPlaceOrder() {
 
         LoginPage loginPage =
-                new LoginPage(driver);
+                new LoginPage(getDriver());
 
         loginPage.clickLoginLink();
 
@@ -32,7 +32,7 @@ public class NotebookOrderTest extends BaseTest {
                 "Login failed");
 
         NotebooksPage notebooksPage =
-                new NotebooksPage(driver)
+                new NotebooksPage(getDriver())
                         .open();
 
         notebooksPage.addNotebookToCart();

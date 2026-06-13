@@ -16,7 +16,7 @@ public class SearchTest extends BaseTest {
     public void verifyValidProductSearch() {
 
         StoreHeaderPage headerPage =
-                new StoreHeaderPage(driver);
+                new StoreHeaderPage(getDriver());
 
         SearchResultsPage searchResultsPage =
                 headerPage.search("computer");
@@ -34,7 +34,7 @@ public class SearchTest extends BaseTest {
     public void verifyInvalidProductSearch() {
 
         StoreHeaderPage headerPage =
-                new StoreHeaderPage(driver);
+                new StoreHeaderPage(getDriver());
 
         SearchResultsPage searchResultsPage =
                 headerPage.search("invalidproductname12345");

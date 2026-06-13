@@ -13,7 +13,7 @@ public class RegistrationAndLoginTest extends BaseTest {
     public void verifyRegistrationAndLogin() {
 
         RegistrationPage registerPage =
-                new RegistrationPage(driver);
+                new RegistrationPage(getDriver());
 
         String email =
                 "faiz"
@@ -42,7 +42,7 @@ public class RegistrationAndLoginTest extends BaseTest {
         registerPage.logout();
 
         LoginPage loginPage =
-                new LoginPage(driver);
+                new LoginPage(getDriver());
 
         loginPage.clickLoginLink();
 

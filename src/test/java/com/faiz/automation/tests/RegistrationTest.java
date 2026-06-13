@@ -21,10 +21,11 @@ public class RegistrationTest extends BaseTest {
             String confirmPassword,
             String expectedResult) {
 
-        driver.get("https://demowebshop.tricentis.com/register");
+        getDriver().get(
+                "https://demowebshop.tricentis.com/register");
 
         RegistrationPage registerPage =
-                new RegistrationPage(driver);
+                new RegistrationPage(getDriver());
 
         String uniqueEmail = email;
 

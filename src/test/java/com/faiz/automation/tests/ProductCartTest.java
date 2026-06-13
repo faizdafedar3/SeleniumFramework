@@ -16,7 +16,7 @@ public class ProductCartTest extends BaseTest {
     public void verifyProductCanBeAddedAndRemovedFromCart() {
 
         ProductDetailsPage productDetailsPage =
-                new ProductDetailsPage(driver)
+                new ProductDetailsPage(getDriver())
                         .openFictionBook();
 
         String productName =

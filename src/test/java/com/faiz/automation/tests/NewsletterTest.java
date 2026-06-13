@@ -15,7 +15,7 @@ public class NewsletterTest extends BaseTest {
     public void verifyNewsletterSubscription() {
 
         StoreHeaderPage headerPage =
-                new StoreHeaderPage(driver);
+                new StoreHeaderPage(getDriver());
 
         String email =
                 "newsletter"

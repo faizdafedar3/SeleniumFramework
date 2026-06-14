@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class RegistrationPage {
+import com.faiz.automation.base.BasePage;
 
-    WebDriver driver;
+public class RegistrationPage extends BasePage {
 
     public RegistrationPage(WebDriver driver) {
 
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -46,41 +46,34 @@ public class RegistrationPage {
     private WebElement logoutLink;
 
     public void clickRegisterLink() {
-        registerLink.click();
+
+        click(registerLink);
     }
 
-    public void registerUser(String fname,
-                             String lname,
-                             String emailId,
-                             String pwd,
-                             String confirmPwd) {
+    public void registerUser(
+            String fname,
+            String lname,
+            String emailId,
+            String pwd,
+            String confirmPwd) {
 
-        genderMale.click();
+        click(genderMale);
 
-        firstName.clear();
-        firstName.sendKeys(fname);
+        type(firstName, fname);
+        type(lastName, lname);
+        type(email, emailId);
+        type(password, pwd);
+        type(confirmPassword, confirmPwd);
 
-        lastName.clear();
-        lastName.sendKeys(lname);
-
-        email.clear();
-        email.sendKeys(emailId);
-
-        password.clear();
-        password.sendKeys(pwd);
-
-        confirmPassword.clear();
-        confirmPassword.sendKeys(confirmPwd);
-
-        registerButton.click();
+        click(registerButton);
     }
 
     public boolean isRegistrationSuccessful() {
 
         try {
 
-            return successMessage.isDisplayed()
-                    && successMessage.getText()
+            return isDisplayed(successMessage)
+                    && getText(successMessage)
                             .contains("Your registration completed");
 
         } catch (Exception e) {
@@ -93,7 +86,7 @@ public class RegistrationPage {
 
         try {
 
-            return successMessage.getText();
+            return getText(successMessage);
 
         } catch (Exception e) {
 
@@ -105,12 +98,14 @@ public class RegistrationPage {
 
         try {
 
-            if (logoutLink.isDisplayed()) {
-                logoutLink.click();
+            if (isDisplayed(logoutLink)) {
+
+                click(logoutLink);
             }
 
         } catch (Exception e) {
 
+            e.printStackTrace();
         }
     }
 }

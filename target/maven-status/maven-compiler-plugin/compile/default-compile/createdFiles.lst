@@ -9,7 +9,6 @@ com\faiz\automation\pages\TopMenuPage.class
 com\faiz\automation\pages\CheckoutPage.class
 com\faiz\automation\pages\ProductDetailsPage.class
 com\faiz\automation\pages\ShoppingCartPage.class
-com\faiz\automation\base\BaseTest.class
 com\faiz\automation\listeners\TestListener.class
 com\faiz\automation\utils\ScreenshotUtil.class
 com\faiz\automation\pages\CartPage.class

@@ -1,18 +1,15 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class SearchResultsPage {
+import com.faiz.automation.base.BasePage;
 
-    private final WebDriverWait wait;
+public class SearchResultsPage extends BasePage {
 
     @FindBy(css = ".page-title h1")
     private WebElement pageTitle;
@@ -25,14 +22,13 @@ public class SearchResultsPage {
 
     public SearchResultsPage(WebDriver driver) {
 
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public String getPageTitle() {
 
-        return wait.until(ExpectedConditions.visibilityOf(pageTitle))
-                .getText()
+        return getText(pageTitle)
                 .trim();
     }
 
@@ -43,8 +39,7 @@ public class SearchResultsPage {
 
     public String getNoResultsMessage() {
 
-        return wait.until(ExpectedConditions.visibilityOf(pageBody))
-                .getText()
+        return getText(pageBody)
                 .trim();
     }
 }

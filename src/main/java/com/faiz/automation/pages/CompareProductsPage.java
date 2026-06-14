@@ -1,18 +1,15 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CompareProductsPage {
+import com.faiz.automation.base.BasePage;
 
-    private final WebDriverWait wait;
+public class CompareProductsPage extends BasePage {
 
     @FindBy(css = ".page-title h1")
     private WebElement pageTitle;
@@ -28,32 +25,34 @@ public class CompareProductsPage {
 
     public CompareProductsPage(WebDriver driver) {
 
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public String getPageTitle() {
 
-        return wait.until(ExpectedConditions.visibilityOf(pageTitle))
-                .getText()
+        return getText(pageTitle)
                 .trim();
     }
 
-    public boolean containsProduct(String expectedProductName) {
+    public boolean containsProduct(
+            String expectedProductName) {
 
         return productNames.stream()
-                .anyMatch(product -> product.getText().trim().equals(expectedProductName));
+                .anyMatch(product ->
+                        product.getText()
+                               .trim()
+                               .equals(expectedProductName));
     }
 
     public void clearCompareList() {
 
-        wait.until(ExpectedConditions.elementToBeClickable(clearListLink)).click();
+        click(clearListLink);
     }
 
     public String getPageBodyText() {
 
-        return wait.until(ExpectedConditions.visibilityOf(pageBody))
-                .getText()
+        return getText(pageBody)
                 .trim();
     }
 }

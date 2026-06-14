@@ -1,34 +1,21 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CheckoutPage {
+import com.faiz.automation.base.BasePage;
 
-    private WebDriver driver;
-    private WebDriverWait wait;
+public class CheckoutPage extends BasePage {
 
     public CheckoutPage(WebDriver driver) {
 
-        this.driver = driver;
-
-        this.wait =
-                new WebDriverWait(
-                        driver,
-                        Duration.ofSeconds(30));
-
-        PageFactory.initElements(
-                driver,
-                this);
+        super(driver);
+        PageFactory.initElements(driver, this);
     }
 
     @FindBy(id = "billing-address-select")
@@ -76,8 +63,7 @@ public class CheckoutPage {
     @FindBy(css = "input.button-1.confirm-order-next-step-button")
     private WebElement confirmOrderButton;
 
-    @FindBy(xpath =
-            "//*[contains(text(),'Your order has been successfully processed')]")
+    @FindBy(xpath = "//*[contains(text(),'Your order has been successfully processed')]")
     private WebElement orderSuccessMessage;
 
     public void completeCheckout(String email) {
@@ -99,10 +85,8 @@ public class CheckoutPage {
 
         try {
 
-            return wait.until(
-                    ExpectedConditions.visibilityOf(
-                            orderSuccessMessage))
-                    .isDisplayed();
+            return isDisplayed(
+                    orderSuccessMessage);
 
         } catch (Exception e) {
 
@@ -115,7 +99,8 @@ public class CheckoutPage {
 
         try {
 
-            if (billingAddressSelect.isDisplayed()) {
+            if (isDisplayed(
+                    billingAddressSelect)) {
 
                 Select addressSelect =
                         new Select(
@@ -144,14 +129,17 @@ public class CheckoutPage {
                     "Creating New Billing Address");
         }
 
-        billingFirstName.clear();
-        billingFirstName.sendKeys("Faiz");
+        type(
+                billingFirstName,
+                "Faiz");
 
-        billingLastName.clear();
-        billingLastName.sendKeys("Dafedar");
+        type(
+                billingLastName,
+                "Dafedar");
 
-        billingEmail.clear();
-        billingEmail.sendKeys(email);
+        type(
+                billingEmail,
+                email);
 
         Select country =
                 new Select(
@@ -160,17 +148,21 @@ public class CheckoutPage {
         country.selectByVisibleText(
                 "India");
 
-        billingCity.clear();
-        billingCity.sendKeys("Bangalore");
+        type(
+                billingCity,
+                "Bangalore");
 
-        billingAddress1.clear();
-        billingAddress1.sendKeys("MG Road");
+        type(
+                billingAddress1,
+                "MG Road");
 
-        billingZip.clear();
-        billingZip.sendKeys("560001");
+        type(
+                billingZip,
+                "560001");
 
-        billingPhone.clear();
-        billingPhone.sendKeys("9876543210");
+        type(
+                billingPhone,
+                "9876543210");
 
         clickElement(
                 billingContinue);
@@ -183,9 +175,8 @@ public class CheckoutPage {
 
         try {
 
-            wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            shippingAddressContinue));
+            waitForClickable(
+                    shippingAddressContinue);
 
             clickElement(
                     shippingAddressContinue);
@@ -204,13 +195,11 @@ public class CheckoutPage {
 
         try {
 
-            wait.until(
-                    ExpectedConditions.visibilityOf(
-                            shippingMethodContinue));
+            waitForVisibility(
+                    shippingMethodContinue);
 
-            wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            shippingMethodContinue));
+            waitForClickable(
+                    shippingMethodContinue);
 
             clickElement(
                     shippingMethodContinue);
@@ -229,9 +218,8 @@ public class CheckoutPage {
 
     private void continuePaymentMethod() {
 
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        paymentMethodContinue));
+        waitForClickable(
+                paymentMethodContinue);
 
         clickElement(
                 paymentMethodContinue);
@@ -242,9 +230,8 @@ public class CheckoutPage {
 
     private void continuePaymentInformation() {
 
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        paymentInfoContinue));
+        waitForClickable(
+                paymentInfoContinue);
 
         clickElement(
                 paymentInfoContinue);
@@ -255,9 +242,8 @@ public class CheckoutPage {
 
     private void confirmOrder() {
 
-        wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        confirmOrderButton));
+        waitForClickable(
+                confirmOrderButton);
 
         clickElement(
                 confirmOrderButton);
@@ -271,19 +257,12 @@ public class CheckoutPage {
 
         try {
 
-            wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            element));
-
-            element.click();
+            click(
+                    element);
 
         } catch (Exception e) {
 
-            JavascriptExecutor js =
-                    (JavascriptExecutor) driver;
-
-            js.executeScript(
-                    "arguments[0].click();",
+            jsClick(
                     element);
         }
     }

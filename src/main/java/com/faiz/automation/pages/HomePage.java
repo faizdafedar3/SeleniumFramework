@@ -6,13 +6,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+import com.faiz.automation.base.BasePage;
 
-    WebDriver driver;
+public class HomePage extends BasePage {
 
     public HomePage(WebDriver driver) {
 
-        this.driver = driver;
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
@@ -30,6 +30,6 @@ public class HomePage {
         actions.moveToElement(computersMenu)
                .perform();
 
-        notebooksLink.click();
+        click(notebooksLink);
     }
 }

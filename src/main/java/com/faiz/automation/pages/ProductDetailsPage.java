@@ -1,19 +1,14 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class ProductDetailsPage {
+import com.faiz.automation.base.BasePage;
 
-    private final WebDriver driver;
-    private final WebDriverWait wait;
+public class ProductDetailsPage extends BasePage {
 
     @FindBy(css = ".product-name h1")
     private WebElement productName;
@@ -44,61 +39,91 @@ public class ProductDetailsPage {
 
     public ProductDetailsPage(WebDriver driver) {
 
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public ProductDetailsPage openFictionBook() {
-        driver.get("https://demowebshop.tricentis.com/fiction");
-        wait.until(ExpectedConditions.visibilityOf(productName));
+
+        driver.get(
+                "https://demowebshop.tricentis.com/fiction");
+
+        waitForVisibility(productName);
+
         return this;
     }
 
     public ProductDetailsPage openNotebook() {
-        driver.get("https://demowebshop.tricentis.com/141-inch-laptop");
-        wait.until(ExpectedConditions.visibilityOf(productName));
+
+        driver.get(
+                "https://demowebshop.tricentis.com/141-inch-laptop");
+
+        waitForVisibility(productName);
+
         return this;
     }
 
     public ProductDetailsPage openSneaker() {
-        driver.get("https://demowebshop.tricentis.com/blue-and-green-sneaker");
-        wait.until(ExpectedConditions.visibilityOf(productName));
+
+        driver.get(
+                "https://demowebshop.tricentis.com/blue-and-green-sneaker");
+
+        waitForVisibility(productName);
+
         selectSneakerSizeIfDisplayed();
+
         return this;
     }
 
     public String getProductName() {
-        return wait.until(ExpectedConditions.visibilityOf(productName))
-                .getText()
+
+        return getText(productName)
                 .trim();
     }
 
     public CartPage addToCartAndOpenCart() {
-        wait.until(ExpectedConditions.elementToBeClickable(addToCartButton)).click();
-        wait.until(ExpectedConditions.visibilityOf(successNotification));
-        wait.until(ExpectedConditions.elementToBeClickable(cartNotificationLink)).click();
+
+        click(addToCartButton);
+
+        waitForVisibility(successNotification);
+
+        click(cartNotificationLink);
+
         return new CartPage(driver);
     }
 
     public WishlistPage addToWishlistAndOpenWishlist() {
-        wait.until(ExpectedConditions.elementToBeClickable(addToWishlistButton)).click();
-        wait.until(ExpectedConditions.visibilityOf(successNotification));
-        wait.until(ExpectedConditions.elementToBeClickable(wishlistNotificationLink)).click();
+
+        click(addToWishlistButton);
+
+        waitForVisibility(successNotification);
+
+        click(wishlistNotificationLink);
+
         return new WishlistPage(driver);
     }
 
     public CompareProductsPage addToCompareAndOpenCompareList() {
-        wait.until(ExpectedConditions.elementToBeClickable(addToCompareButton)).click();
+
+        click(addToCompareButton);
+
+        waitForVisibility(successNotification);
+
         return new CompareProductsPage(driver);
     }
 
     private void selectSneakerSizeIfDisplayed() {
+
         try {
-            new Select(wait.until(ExpectedConditions.visibilityOf(sneakerSize)))
+
+            waitForVisibility(sneakerSize);
+
+            new Select(sneakerSize)
                     .selectByVisibleText("8");
+
         } catch (Exception e) {
-            // Other products do not have sneaker size.
+
+            // Other products don't have size selection
         }
     }
 }

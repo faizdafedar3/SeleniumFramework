@@ -2,6 +2,7 @@ package com.faiz.automation.base;
 
 import java.time.Duration;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,38 +17,80 @@ public class BasePage {
 
         this.driver = driver;
 
-        wait = new WebDriverWait(
-                driver,
-                Duration.ofSeconds(10));
+        this.wait =
+                new WebDriverWait(
+                        driver,
+                        Duration.ofSeconds(10));
     }
 
-    protected void click(WebElement element) {
+    protected void click(
+            WebElement element) {
 
         wait.until(
-                ExpectedConditions.elementToBeClickable(element))
+                ExpectedConditions.elementToBeClickable(
+                        element))
                 .click();
     }
 
-    protected void type(WebElement element, String text) {
+    protected void jsClick(
+            WebElement element) {
+
+        ((JavascriptExecutor) driver)
+                .executeScript(
+                        "arguments[0].click();",
+                        element);
+    }
+
+    protected void type(
+            WebElement element,
+            String text) {
 
         wait.until(
-                ExpectedConditions.visibilityOf(element));
+                ExpectedConditions.visibilityOf(
+                        element));
 
         element.clear();
         element.sendKeys(text);
     }
 
-    protected String getText(WebElement element) {
+    protected String getText(
+            WebElement element) {
 
         return wait.until(
-                ExpectedConditions.visibilityOf(element))
+                ExpectedConditions.visibilityOf(
+                        element))
                 .getText();
     }
 
-    protected boolean isDisplayed(WebElement element) {
+    protected boolean isDisplayed(
+            WebElement element) {
 
-        return wait.until(
-                ExpectedConditions.visibilityOf(element))
-                .isDisplayed();
+        try {
+
+            return wait.until(
+                    ExpectedConditions.visibilityOf(
+                            element))
+                    .isDisplayed();
+
+        } catch (Exception e) {
+
+            return false;
+        }
+    }
+
+    protected void waitForVisibility(
+            WebElement element) {
+
+        wait.until(
+                ExpectedConditions.visibilityOf(
+                        element));
+    }
+
+    protected void waitForClickable(
+            WebElement element) {
+
+        wait.until(
+                ExpectedConditions.elementToBeClickable(
+                        element));
     }
 }

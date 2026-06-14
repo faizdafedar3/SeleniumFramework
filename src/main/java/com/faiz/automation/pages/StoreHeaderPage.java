@@ -1,18 +1,13 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class StoreHeaderPage {
+import com.faiz.automation.base.BasePage;
 
-    private final WebDriver waitDriver;
-    private final WebDriverWait wait;
+public class StoreHeaderPage extends BasePage {
 
     @FindBy(id = "small-searchterms")
     private WebElement searchTextBox;
@@ -31,34 +26,49 @@ public class StoreHeaderPage {
 
     public StoreHeaderPage(WebDriver driver) {
 
-        this.waitDriver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
-    public SearchResultsPage search(String productName) {
+    public SearchResultsPage search(
+            String productName) {
 
-        wait.until(ExpectedConditions.visibilityOf(searchTextBox));
-        searchTextBox.clear();
-        searchTextBox.sendKeys(productName);
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+        type(
+                searchTextBox,
+                productName);
 
-        return new SearchResultsPage(waitDriver);
+        click(
+                searchButton);
+
+        return new SearchResultsPage(
+                driver);
     }
 
-    public void subscribeNewsletter(String email) {
+    public void subscribeNewsletter(
+            String email) {
 
-        wait.until(ExpectedConditions.visibilityOf(newsletterEmail));
-        newsletterEmail.clear();
-        newsletterEmail.sendKeys(email);
-        wait.until(ExpectedConditions.elementToBeClickable(newsletterSubscribeButton)).click();
+        type(
+                newsletterEmail,
+                email);
+
+        click(
+                newsletterSubscribeButton);
     }
 
     public String getNewsletterMessage() {
 
-        wait.until(ExpectedConditions.visibilityOf(newsletterResult));
-        wait.until(driver -> !newsletterResult.getText().trim().isEmpty());
+        waitForVisibility(
+                newsletterResult);
 
-        return newsletterResult.getText().trim();
+        wait.until(
+                driver ->
+                        !newsletterResult
+                                .getText()
+                                .trim()
+                                .isEmpty());
+
+        return getText(
+                newsletterResult)
+                .trim();
     }
 }

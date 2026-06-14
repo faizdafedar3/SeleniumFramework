@@ -1,18 +1,15 @@
 package com.faiz.automation.pages;
 
-import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class CartPage {
+import com.faiz.automation.base.BasePage;
 
-    private final WebDriverWait wait;
+public class CartPage extends BasePage {
 
     @FindBy(css = ".page-title h1")
     private WebElement pageTitle;
@@ -31,38 +28,42 @@ public class CartPage {
 
     public CartPage(WebDriver driver) {
 
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        super(driver);
         PageFactory.initElements(driver, this);
     }
 
     public String getPageTitle() {
 
-        return wait.until(ExpectedConditions.visibilityOf(pageTitle))
-                .getText()
+        return getText(pageTitle)
                 .trim();
     }
 
-    public boolean containsProduct(String expectedProductName) {
+    public boolean containsProduct(
+            String expectedProductName) {
 
         return productNames.stream()
-                .anyMatch(product -> product.getText().trim().equals(expectedProductName));
+                .anyMatch(product ->
+                        product.getText()
+                               .trim()
+                               .equals(expectedProductName));
     }
 
     public void removeAllProducts() {
 
         for (WebElement removeCheckbox : removeCheckboxes) {
+
             if (!removeCheckbox.isSelected()) {
-                removeCheckbox.click();
+
+                click(removeCheckbox);
             }
         }
 
-        wait.until(ExpectedConditions.elementToBeClickable(updateCartButton)).click();
+        click(updateCartButton);
     }
 
     public String getCartMessage() {
 
-        return wait.until(ExpectedConditions.visibilityOf(orderSummaryContent))
-                .getText()
+        return getText(orderSummaryContent)
                 .trim();
     }
 }

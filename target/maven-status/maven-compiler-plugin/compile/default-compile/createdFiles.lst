@@ -5,6 +5,7 @@ com\faiz\automation\pages\WishlistPage.class
 com\faiz\automation\pages\StoreHeaderPage.class
 com\faiz\automation\listeners\RetryAnalyzer.class
 com\faiz\automation\pages\RegistrationPage.class
+com\faiz\automation\utils\ExcelUtil.class
 com\faiz\automation\pages\TopMenuPage.class
 com\faiz\automation\pages\CheckoutPage.class
 com\faiz\automation\pages\ProductDetailsPage.class

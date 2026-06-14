@@ -15,8 +15,7 @@ public class BaseTest {
     @BeforeMethod
     public void setUp() {
 
-        DriverFactory.setDriver(
-                new ChromeDriver());
+        DriverFactory.setDriver(new ChromeDriver());
 
         DriverFactory.getDriver()
                      .manage()
@@ -28,12 +27,53 @@ public class BaseTest {
                      .timeouts()
                      .implicitlyWait(Duration.ofSeconds(10));
 
-        DriverFactory.getDriver()
-                     .get(
-                             ConfigReader.getProperty("url"));
+        launchApplicationWithRetry();
     }
 
-    @AfterMethod
+    private void launchApplicationWithRetry() {
+
+        String url = ConfigReader.getProperty("url");
+
+        int maxAttempts = 3;
+
+        for (int attempt = 1; attempt <= maxAttempts; attempt++) {
+
+            try {
+
+                System.out.println(
+                        "Launching Application - Attempt "
+                                + attempt);
+
+                DriverFactory.getDriver().get(url);
+
+                System.out.println(
+                        "Application launched successfully");
+
+                return;
+
+            } catch (Exception e) {
+
+                System.out.println(
+                        "Failed to launch application. Attempt "
+                                + attempt);
+
+                e.printStackTrace();
+
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+        }
+
+        throw new RuntimeException(
+                "Unable to open application URL after "
+                        + maxAttempts
+                        + " attempts");
+    }
+
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
 
         DriverFactory.quitDriver();
